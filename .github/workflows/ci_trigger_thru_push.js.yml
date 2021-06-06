@@ -5,7 +5,6 @@ on:
     branches: [ central/develop ]
 
 jobs:
-
   build:
     name: personal/feature and have PR to central/develop
     runs-on: ubuntu-latest
