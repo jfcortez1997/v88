@@ -11,7 +11,7 @@ on:
     
 jobs:
   build:
-    name: Jenkin test thru push
+    name: Jenkin test thru push 
     runs-on: ubuntu-latest
     env:
       working-directory: './continuous integration/survey-form-v1'
