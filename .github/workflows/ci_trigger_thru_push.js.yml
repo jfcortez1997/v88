@@ -2,27 +2,36 @@ name: Continuous Integration
 
 on:
   push:
-    branches:
-      - personal/bugfix
+    branches: [ feature/abc ]
   pull_request:
-    branches:
-      - main
-      - develop
-    
+    branches: [ feature/abc ]
+
 jobs:
+
   build:
-    name: Jenkin test thru push
+    name: Build simple project
     runs-on: ubuntu-latest
     env:
-      working-directory: './continuous integration/survey-form-v1'
+      working-directory: './continuous integration/survey-form-v2'
     steps:
     - name: Checkout project
       uses: actions/checkout@v2
     - name: Use Node.js 
       uses: actions/setup-node@v1
-    - name: Install dependencies
-      run: npm install
+
+    - name: Compose up the docker
+      run: docker-compose -f "docker-compose.yml" up -d --build
       working-directory: ${{env.working-directory}}
-    - name: Test project
-      run: npm test
+
+    - name: List all container
+      run: docker ps
+
+    - name: Run tests from the built image
+      run: docker run survey-form-v2 sh -c "npm test" 
       working-directory: ${{env.working-directory}}
+      
+    - name: Compose down the docker
+      run: docker-compose -f "docker-compose.yml" down
+      working-directory: ${{env.working-directory}}
+
+
