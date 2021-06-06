@@ -30,4 +30,5 @@ Note: Naming convention is so important, not only in codes, but also in naming b
 Good luck! Don't forget to upload necessary screenshots related to each requirement.
 
 ## Changes:
-This is some changes to made a pull-request from feature/git_add_all to develop.
+This is some changes to made a pull-request from both feature to develop.
+
