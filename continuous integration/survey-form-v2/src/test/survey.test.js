@@ -1,8 +1,8 @@
 process.env.NODE_ENV = 'test';
 
-const chai                  = require('chai');
-const expect                = chai.expect;
-const SurveyModel           = require('../models/survey.model');
+const chai                 = require('chai');
+const expect               = chai.expect;
+const SurveyModel          = require('../models/survey.model');
 
 
 describe("Survey Model", function(){
