@@ -1,15 +1,13 @@
 name: Continuous Integration
 
 on:
-  push:
-    branches: [ feature/abc ]
   pull_request:
     branches: [ central/develop ]
 
 jobs:
 
   build:
-    name: Build simple project
+    name: personal/feature and have PR to central/develop
     runs-on: ubuntu-latest
     env:
       working-directory: './continuous integration/survey-form-v2'
