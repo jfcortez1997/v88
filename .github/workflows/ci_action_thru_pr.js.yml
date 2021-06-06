@@ -14,7 +14,7 @@ jobs:
     name: Simple test thru PR
     runs-on: ubuntu-latest
     env:
-      working-directory: './continuous integration/action_thru_pr'
+      working-directory: './continuous integration/git-commands'
     steps:
     - name: Checkout project
       uses: actions/checkout@v2
