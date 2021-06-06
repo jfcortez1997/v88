@@ -25,3 +25,4 @@ jobs:
       working-directory: ${{env.working-directory}}
     - name: Test project
       run: npm test
+      working-directory: ${{env.working-directory}}
